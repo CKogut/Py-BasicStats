@@ -39,3 +39,21 @@ class StatzcwTest(unittest.TestCase):
         expected_out = 3.5
         actual_out = statzcw.zmedian(list_in)
         self.assertEqual(expected_out, actual_out)
+
+    def test_zvarience(self):
+        list_in = [5, 4, 4, 1, 3, 2]
+        expected_out = 2.166666666666667
+        actual_out = statzcw.zvariance(list_in)
+        self.assertEqual(expected_out, actual_out)
+
+    def test_zstddev(self):
+        list_in = [5, 4, 4, 1, 3, 2]
+        expected_out = 1.4719601443879746
+        actual_out = statzcw.zstddev(list_in)
+        self.assertEqual(expected_out, actual_out)
+
+    def test_zstderr(self):
+        list_in = [5, 4, 4, 1, 3, 2]
+        expected_out = 0.6009252125773317
+        actual_out = statzcw.zstderr(list_in)
+        self.assertEqual(expected_out, actual_out)
