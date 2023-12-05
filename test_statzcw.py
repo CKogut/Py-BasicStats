@@ -57,3 +57,10 @@ class StatzcwTest(unittest.TestCase):
         expected_out = 0.6009252125773317
         actual_out = statzcw.zstderr(list_in)
         self.assertEqual(expected_out, actual_out)
+
+    def test_zcorr(self):
+        list_in1 = [5, 4, 4, 1, 3, 2]
+        list_in2 = [1, 2, 3, 4, 5, 6]
+        expected_out = -0.7625866911626911
+        actual_out = statzcw.zcorr(list_in1, list_in2)
+        self.assertEqual(expected_out, actual_out)
